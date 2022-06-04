@@ -1,48 +1,122 @@
-# Salov Ivan
-## Junior Front-end Developer
-
-![Photo Me](https://avatars.githubusercontent.com/u/95968986)
-
-## About Me
-
-The goal is to master front-end development. Experience with HTML and CSS on two projects. The main direction of SEO-optimization.
-
-## Skills
-
-- HTML5
-- CSS3
-- JS (basic)
-- Git
-- Github
-- Webpack (little)
-
-## Contacts
-
-- e-mail: ivan.v.salov@gmail.com
-- Telegram: https://t.me/rockseo
-- Discord: Singlelol#4570
-
-## Code Example
-
-```sh
-function multiply (a, b) {
-    return a * b;
-}
-```
-
-## Project
-
-| Name | URL |
-| ------ | ------ |
-| Slider Horisontal| [Slider Horisontal](https://singlelol.github.io/slider/ "Slider Horisontal") |
-| Drag'n'Drop | [Drag'n'Drop](https://singlelol.github.io/drag-drop/ "Drag'n'Drop") |
-| Slider Vertical | [Slider Vertical](https://singlelol.github.io/slider-2/ "Slider Vertical") |
-| Game: Board | [Game: Board](https://singlelol.github.io/board/ "Game: Board") |
-| Game: Aim | [Game: Aim](https://singlelol.github.io/game-aim/ "Game: Aim") |
-
-## Education
-
-- Simulators HTML Academy
-- Learn JavaScript
-- Intensives Glo Academy and Result School
-- English Level - A1 or A2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Developer CV</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+</head>
+<body>
+    <script src="/app.js" defer></script>
+    <header class="cv-header" id="main">
+        <div class="cv-header__left">
+            <h1 class="cv-header__title">Salov Ivan</h1>
+            <div class="cv-header__desc">Junior Front-end Developer</div>
+        </div>
+        <div class="cv-headr__right">
+            <div class="cv-header__photocon"><img src="/img/_SHE5459.jpg" alt="My photo" class="cv-header__photo" width="200" height="200"></div>
+        </div>
+    </header>
+    <main class="cv-main flex-row">
+        <nav class="cv-header__nav">
+            <div class="cv-header__navblock flex-row">
+                <a href="#about">About Me</a>
+                <a href="#exp">Experience</a>
+                <a href="#edu">Education</a>
+                <a href="#prj">Project</a>
+                <a href="#code">Code Example</a>
+            </div>
+        </nav>
+        <section class="cv-main__left cv-main m-top">
+            <div class="cv-main__section">
+                <div class="cv-main__about">
+                    <div class="cv-main__about-header" id="about">About Me</div>
+                    <div class="cv-main__about-desc m-top">The goal is to master front-end development. Experience with HTML and CSS on two projects. The main direction of SEO-optimization.</div>
+                </div>
+                <h2 class="cv-main__section-header" id="exp">EXPERIENCE</h2>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">Internet Marketer</div>
+                    <div class="cv-main__block-title m-top">Sotiks.net</div>
+                    <div class="cv-main__block-date m-top">Feb 2020 - Oct 2020</div>
+                    <div class="cv-main__block-desc m-top">Online store promotion in search engines, placement on marketplaces, marketing strategy, brand promotion in social networks, SEO optimization, content, analytics.</div>
+                </div>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">Internet Marketer</div>
+                    <div class="cv-main__block-title m-top">Rusgeocom.ru</div>
+                    <div class="cv-main__block-date m-top">Oct 2020 - Until now</div>
+                    <div class="cv-main__block-desc m-top">Launch, optimization of advertising campaigns in Google Ads (Search, Display Network, Merchant), Yandex.Direct (Search, YAN, Banners, Market). Landing page analysis. SEO preparation of pages. Performing work on SEO (analysis Yandex.Webmaster, Google.SearchConsole). Statement of technical specifications for the designer, programmers, content managers.</div>
+                </div>
+            </div>
+            <div class="cv-main__section">
+                <h2 class="cv-main__section-header" id="edu">EDUCATION</h2>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">HTML Academy</div>
+                    <div class="cv-main__block-title m-top">Simulators</div>
+                    <div class="cv-main__block-date m-top">Nov 2021 - Until now</div>
+                </div>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">Learn JavaScript</div>
+                    <div class="cv-main__block-title m-top">Self Learning</div>
+                    <div class="cv-main__block-date m-top">Marth 2022 - Until now</div>
+                </div>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">Glo Academy and Result School</div>
+                    <div class="cv-main__block-title m-top">Intensives</div>
+                    <div class="cv-main__block-date m-top">Jan 2022 - April 2022</div>
+                </div>
+            </div>
+            <div class="cv-main__section">
+                <h2 class="cv-main__section-header" id="prj">PROJECT</h2>
+                <div class="cv-main__section-string"><span>Slider Horisontal</span><a href="https://singlelol.github.io/slider/" class="cv-link">(https://singlelol.github.io/slider/)</a></div>
+                <div class="cv-main__section-string"><span>Drag'n'Drop</span><a href="https://singlelol.github.io/drag-drop/" class="cv-link">(https://singlelol.github.io/drag-drop/)</a></div>
+                <div class="cv-main__section-string"><span>Slider Vertical</span><a href="https://singlelol.github.io/slider-2/" class="cv-link">(https://singlelol.github.io/slider-2/)</a></div>
+                <div class="cv-main__section-string"><span>Game: Interactive Board</span><a href="https://singlelol.github.io/board/" class="cv-link">(https://singlelol.github.io/board/)</a></div>
+                <div class="cv-main__section-string"><span>Game: Training Aim</span><a href="https://singlelol.github.io/game-aim/" class="cv-link">(https://singlelol.github.io/game-aim/)</a></div>
+            </div>
+            <div class="cv-main__section">
+                <h2 class="cv-main__section-header" id="code">CODE EXAMPLE</h2>
+                <div class="cv-main__section-string"><code>function multiply (a, b) {
+                    <br>return a * b;
+                    <br>}</code></div>
+            </div>
+            <div class="return_button"><a>Top</a></div>
+        </section>
+        <section class="cv-main__right m-left">
+            <div class="cv-main__right-block m-top">
+                <h2 class="cv-main__right-title">Contact</h2>
+                <ul class="cv-main__right-graph">
+                    <li>e-mail: <a href="mailto:ivan.v.salov@gmail.com">ivan.v.salov@gmail.com</a></li>
+                    <li>Telegram: <a href="https://t.me/rockseo">https://t.me/rockseo</a></li>
+                    <li>Discord: Singlelol#4570</li>
+                </ul>
+            </div>
+            <div class="cv-main__right-block">
+                <div class="cv-main__right-title">Skills</div>
+                <ul class="cv-main__right-graph">
+                    <li>HTML 5</li>
+                    <li>CSS 3</li>
+                    <li>JS (basic)</li>
+                    <li>Git</li>
+                    <li>Github</li>
+                    <li>Webpack (little)</li>
+                </ul>
+            </div>
+            <div class="cv-main__right-block">
+                <div class="cv-main__right-title">Languages</div>
+                <div class="cv-main__right-string m-top">English Level - A1/A2</div>
+            </div>
+        </section>
+    </main>
+    <footer class="cv-footer">
+       <div class="cv-footer__block flex-row">
+           <div class="cv-footer__git">GitHub <a href="https://github.com/Singlelol">https://github.com/Singlelol</a></div>
+           <div class="cv-footer__year">2022</div>
+           <div class="cv-footer__section">
+               <div class="cv-footer__link"><a href="https://rs.school/js/">RS School</a></div>
+               <img class="cv-footer__logo m-left" src="https://rs.school/images/rs_school_js.svg" alt="logo RS School" width="40" height="40">
+           </div>
+       </div> 
+    </footer>
+</html>
