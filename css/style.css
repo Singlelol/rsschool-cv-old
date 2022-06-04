@@ -1,3 +1,6 @@
+/* stylelint-disable color-hex-case */
+/* stylelint-disable unit-whitelist */
+/* stylelint-disable indentation */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto-Regular.woff2") format("woff2")
@@ -24,12 +27,12 @@
 
 html,
 body {
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    background: #fff;
-    color: #000;
     height: 100%;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: #000000;
+    background: #ffffff;
     scroll-behavior: smooth;
 }
 
@@ -44,7 +47,7 @@ ul {
     padding-left: 0;
 }
 
-ul>li {
+ul > li {
     list-style: none;
 }
 
@@ -75,7 +78,9 @@ input {
     flex-wrap: wrap;
 }
 
-header, main, footer {
+header,
+main,
+footer {
     position: relative;
     width: 120rem;
     margin: 0 auto 0 auto;
@@ -109,7 +114,7 @@ a:hover {
 }
 
 .cv-header__photo {
-    border: 0 solid #000;
+    border: 0 solid #000000;
     border-radius: 50%;
     display: inline-block;
     overflow: hidden;
@@ -121,7 +126,7 @@ div .cv-header__photo {
 
 .cv-main {
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 .cv-header__nav {
@@ -133,7 +138,7 @@ div .cv-header__photo {
 
 .cv-header__navblock {
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
     font: normal 400 1.8rem/1.56 sans-serif;
     height: 4rem;
 }
@@ -149,7 +154,8 @@ div .cv-header__photo {
     margin-top: 3rem;
 }
 
-.cv-main__about-header, .cv-main__block-header {
+.cv-main__about-header,
+.cv-main__block-header {
     font: normal 700 2.2rem/1.5 sans-serif;
 }
 
@@ -164,7 +170,7 @@ div .cv-header__photo {
     color: #73808D;
 }
 
-.cv-main__section-string{
+.cv-main__section-string {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -183,14 +189,15 @@ div .cv-header__photo {
 }
 
 .cv-main__right {
-    font: normal 400 2.2rem/1.4 sans-serif;
     color: #73808D;
+    font: normal 400 2.2rem/1.4 sans-serif;
 }
 
 .cv-main__right-title {
     font: normal 700 2.2rem/1.4 sans-serif;
 }
-.cv-footer{
+
+.cv-footer {
     margin-top: 3rem;
     background-color: rgb(185, 161, 20, 0.8);
 }
@@ -216,14 +223,15 @@ div .cv-header__photo {
     height: 4rem;
 }
 
-.cv-footer__git, .cv-footer__year {
+.cv-footer__git,
+.cv-footer__year {
     align-self: center;
 }
 
-.m-top{
+.m-top {
     margin-top: 2rem;
 }
 
 .m-left {
-    margin-left: 2rem; 
+    margin-left: 2rem;
 }
