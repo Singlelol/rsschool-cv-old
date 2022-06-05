@@ -82,7 +82,7 @@ header,
 main,
 footer {
     position: relative;
-    width: 120rem;
+    width: 90%;
     margin: 0 auto 0 auto;
 }
 
@@ -92,12 +92,13 @@ a:hover {
 
 
 .cv-header {
-    height: 16rem;
+
     padding-left: 4.8rem;
     margin-top: 4.8rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .cv-header__title {
@@ -109,7 +110,7 @@ a:hover {
 }
 
 .cv-header__photocon {
-    width: 18rem;
+    min-width: 18rem;
     height: 18rem;
 }
 
@@ -131,7 +132,8 @@ div .cv-header__photo {
 
 .cv-header__nav {
     margin-top: 4rem;
-    padding-left: 4.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: rgb(185, 161, 20, 0.8);
     width: 100%;
 }
@@ -140,7 +142,11 @@ div .cv-header__photo {
     justify-content: space-around;
     align-items: center;
     font: normal 400 1.8rem/1.56 sans-serif;
-    height: 4rem;
+    min-height: 4rem;
+}
+
+.cv-header__navblock a:not(:last-child) {
+    margin-right: 1rem;
 }
 
 .cv-main__left {
@@ -204,11 +210,10 @@ div .cv-header__photo {
 
 .cv-footer__block {
     width: 100%;
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding: 2rem  4.8rem 2rem 4.8rem;
     justify-content: space-between;
     font: normal 400 1.8rem/1.4 sans-serif;
-    height: 8rem;
+    min-height: 8rem;
 }
 
 .cv-footer__section {
