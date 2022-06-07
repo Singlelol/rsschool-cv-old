@@ -243,6 +243,18 @@ div .cv-header__photo {
     margin-left: 2rem;
 }
 
+@media (max-width: 600px) {
+    .cv-header__navblock {
+        flex-direction: column;
+    }
+
+    .cv-header__navblock a:not(:last-child) {
+        width: 100%;
+        text-align: center;
+        border-bottom: #000000 solid 2px;
+    }
+}
+
 @media (max-width: 800px) {
     .cv-header {
         padding: 0 1rem 0 1rem;
@@ -252,6 +264,10 @@ div .cv-header__photo {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .cv-headr__right {
+        margin-top: 2rem;
     }
 
     .cv-header__desc {
