@@ -146,7 +146,7 @@ div .cv-header__photo {
     min-height: 4rem;
 }
 
-.cv-header__navblock a:not(:last-child) {
+.cv-header__navblock li:not(:last-child) {
     margin-right: 1rem;
 }
 
@@ -251,7 +251,7 @@ div .cv-header__photo {
         flex-direction: column;
     }
 
-    .cv-header__navblock a:not(:last-child) {
+    .cv-header__navblock li:not(:last-child) {
         width: 100%;
         text-align: center;
         border-bottom: #000000 solid 2px;
