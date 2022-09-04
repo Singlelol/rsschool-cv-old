@@ -66,6 +66,11 @@
                     <div class="cv-main__block-title m-top">Intensives</div>
                     <div class="cv-main__block-date m-top">Jan 2022 - April 2022</div>
                 </div>
+                <div class="cv-main__block">
+                    <div class="cv-main__block-header">RS School (Pre-school)</div>
+                    <div class="cv-main__block-title m-top">Full course</div>
+                    <div class="cv-main__block-date m-top">Jun 2022 - Aug 2022</div>
+                </div>
             </div>
             <div class="cv-main__section">
                 <h2 class="cv-main__section-header" id="prj">PROJECT</h2>
@@ -74,12 +79,37 @@
                 <div class="cv-main__section-string"><span>Slider Vertical</span><a href="https://singlelol.github.io/slider-2/" class="cv-link">(https://singlelol.github.io/slider-2/)</a></div>
                 <div class="cv-main__section-string"><span>Game: Interactive Board</span><a href="https://singlelol.github.io/board/" class="cv-link">(https://singlelol.github.io/board/)</a></div>
                 <div class="cv-main__section-string"><span>Game: Training Aim</span><a href="https://singlelol.github.io/game-aim/" class="cv-link">(https://singlelol.github.io/game-aim/)</a></div>
+                <div class="cv-main__section-string"><span>Personal CV</span><a href="https://singlelol.github.io/rsschool-cv/" class="cv-link">(https://singlelol.github.io/rsschool-cv/)</a></div>
+                <div class="cv-main__section-string"><span>Travel Landing page</span><a href="https://rolling-scopes-school.github.io/singlelol-JSFEPRESCHOOL2022Q2/travel/" class="cv-link">(https://rolling-scopes-school.github.io/singlelol-JSFEPRESCHOOL2022Q2/travel/)</a></div>
+                <div class="cv-main__section-string"><span>Momentum App in Chome Store</span><a href="https://rolling-scopes-school.github.io/singlelol-JSFEPRESCHOOL2022Q2/momentum/" class="cv-link">(https://rolling-scopes-school.github.io/singlelol-JSFEPRESCHOOL2022Q2/momentum/)</a></div>
+                <div class="cv-main__section-string"><span>Eldritch Helper App</span><a href="https://singlelol.github.io/eldritch-codejam/" class="cv-link">(https://singlelol.github.io/eldritch-codejam/)</a></div>
             </div>
             <div class="cv-main__section">
                 <h2 class="cv-main__section-header" id="code">CODE EXAMPLE</h2>
-                <div class="cv-main__section-string"><pre><code>function multiply (a, b) {
-                    <br>&#9;return a * b;
-                    <br>}</code></pre></div>
+                <div class="cv-main__section-string"><pre><code>function convert(input, source, target) {
+                    <br>const res1 = (elem, floor) => {
+                        <br>let n = 0;
+                        <br>for (let i = 0; i < elem.length; i++) {
+                            <br>let index = floor.indexOf(elem[i]);
+                            <br>n += (index * Math.pow(floor.length, elem.length - i - 1))
+                            <br>}
+                            <br>return n;
+                            <br>};
+                            <br>
+                            <br>const outSort = (elem2, head) => {
+                                <br>let res2 = '';
+                                <br>if (elem2 === 0){
+                                    <br>return head[elem2];
+                                    <br>}
+                                    <br>while (0 < elem2) {
+                                        <br>res2 = head[elem2 % head.length] + res2;
+                                        <br>elem2 = (elem2 - (elem2 % head.length)) / head.length;
+                                        <br>}
+                                        <br>return res2;
+                                        <br>}
+                    
+                                        <br>return outSort(res1(input, source), target);
+                                        <br>}</code></pre></div>
             </div>
             <div class="return_button"><a>Top</a></div>
         </section>
@@ -97,7 +127,7 @@
                 <ul class="cv-main__right-graph">
                     <li>HTML 5</li>
                     <li>CSS 3</li>
-                    <li>JS (basic)</li>
+                    <li>JS (advansed)</li>
                     <li>Git</li>
                     <li>Github</li>
                     <li>Webpack (little)</li>
