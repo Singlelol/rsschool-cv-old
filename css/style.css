@@ -110,20 +110,31 @@ a:hover {
     font: normal 400 3.6rem/1.56 sans-serif;
 }
 
+.cv-headr__right {
+    display: flex;
+    border: 2px solid purple;
+    border-radius: 50%;
+}
+
 .cv-header__photocon {
+    display: flex;
     min-width: 18rem;
     height: 18rem;
+    padding: 2px;
 }
 
 .cv-header__photo {
     border: 0 solid #000000;
     border-radius: 50%;
-    display: inline-block;
-    overflow: hidden;
 }
 
-div .cv-header__photo {
-    display: block;
+.cv-header__photocon-pre {
+    display: contents;
+}
+
+.cv-header__photocon-pre {
+    display: contents;
+    padding: 2px;
 }
 
 .cv-main {
