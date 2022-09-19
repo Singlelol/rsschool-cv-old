@@ -124,12 +124,7 @@ a:hover {
 }
 
 .cv-header__photo {
-    border: 0 solid #000000;
     border-radius: 50%;
-}
-
-.cv-header__photocon-pre {
-    display: contents;
 }
 
 .cv-header__photocon-pre {
@@ -243,10 +238,7 @@ a:hover {
 }
 
 .cv-main__section-string {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
@@ -282,8 +274,8 @@ a:hover {
 
 .cv-main__right-progressbar {
     position: relative;
-    width: 170px;
-    height: 170px;
+    width: 17rem;
+    height: 17rem;
     margin: 1em;
     transform: rotate(-90deg);
 }
@@ -345,7 +337,7 @@ a:hover {
     top: 50%;
     left: 50%;
     padding: 0.25em 0.5em;
-    color: black;
+    color: #000;
     border-radius: 0.25em;
     font-size: 1.8rem;
     transform: translate(-50%, -50%) rotate(90deg);
@@ -475,7 +467,7 @@ a:hover {
 
 @media (max-width: 800px) {
     .cv-header {
-        padding: 0 1rem 0 1rem;
+        padding: 0 1rem;
     }
 
     .cv-header__left {
