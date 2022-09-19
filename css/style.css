@@ -276,7 +276,6 @@ a:hover {
 }
 
 .cv-main__right-block:nth-child(2) > .cv-main__right-graph {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -526,5 +525,9 @@ a:hover {
         align-items: baseline;
         width: 90%;
         justify-content: space-between;
+    }
+
+    .cv-main__right-block:nth-child(2) > .cv-main__right-graph {
+        display: flex;
     }
 }
