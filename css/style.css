@@ -271,9 +271,14 @@ a:hover {
     font: normal 700 2.2rem/1.4 sans-serif;
 }
 
-cv-main__right-block:nth-child(2) > .cv-main__right-graph {
-    background-color: #73808D;
-    border-radius: 20px;
+.cv-main__right-block {
+    width: 100%;
+}
+
+.cv-main__right-block:nth-child(2) > .cv-main__right-graph {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .cv-main__right-progressbar {
