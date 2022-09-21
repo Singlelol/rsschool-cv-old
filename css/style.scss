@@ -5,6 +5,19 @@ $grey: #73808D;
 $font700: normal 700;
 $font400: normal 400;
 $animation: 1s ease-in-out forwards;
+$mobile: 600px;
+$tablet: 800px;
+$small: 1100px;
+
+@mixin widthandhight () {
+    width: 100%;
+    height: 100%;
+}
+@mixin flexrow () {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 @font-face {
     font-family: "Roboto";
@@ -46,8 +59,7 @@ body {
 }
 
 img {
-    width: 100%;
-    height: 100%;
+    @include widthandhight();
     object-fit: contain;
     flex-shrink: 0;
 }
@@ -84,9 +96,7 @@ input {
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flexrow();
 }
 
 header,
@@ -102,7 +112,6 @@ a {
 }
 
 .cv-header {
-    padding: 0 4.8rem;
     margin-top: 4.8rem;
     justify-content: space-around;
     align-items: center;
@@ -113,12 +122,20 @@ a {
     
     &__desc {
     font: $font400 3.6rem/1.56 sans-serif;
+    
+    @media (max-width: $tablet) {
+        margin-top: 2rem;
+        }
     }
     
     &__right {
     display: flex;
     border: 2px solid purple;
     border-radius: 50%;
+    
+    @media (max-width: $mobile) {
+        margin-top: 2rem;
+        }
     }
     
     &__photocon {
@@ -136,113 +153,16 @@ a {
     &__photo {
     border-radius: 50%;
     }
-}
-
-.cv-main {
-    justify-content: flex-start;
-    align-items: flex-start;
-    
-    &__section {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 2px solid $gold;
-    
-        &-header {
-    margin-top: 3rem;
-    font: $font400 2rem/1.4 sans-serif;
-    color: $grey;
-        }
-        
-        &-string {
-    justify-content: space-between;
-    margin-bottom: 2rem;
-        }
-    }
     
     &__left {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 65%;
-    font: $font400 1.8rem/1.4 sans-serif;
-    padding-right: 2rem;
-    border-right: $gold solid 2px;
-    }
-    
-    &__block {
-    margin-top: 3rem;
-    
-        &-date {
-    font: $font400 1.4rem/2 sans-serif;
-    color: $grey;
+        @media (max-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         }
     }
     
-    &__about-header,
-    &__block-header  {
-    font: $font700 2.2rem/1.5 sans-serif;
-    }
-    
-    &__right {
-    color: $grey;
-    font: $font400 2.2rem/1.4 sans-serif;
-    
-        &-title {
-    font: $font700 2.2rem/1.4 sans-serif;
-        }
-        
-        &-block {
-    width: 100%;
-    
-        &:nth-child(2) {
-            
-            > .cv-main__right-graph {
-    flex-wrap: wrap;
-    justify-content: center;
-                }
-            }
-        }
-        
-        &-progressbar {
-    position: relative;
-    width: 17rem;
-    height: 17rem;
-    margin: 1em;
-    transform: rotate(-90deg);
-    
-            &-svg {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    
-                &-circle {
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke-width: 10;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
-    stroke: $grey;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-                }
-            }
-            
-            &-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 0.25em 0.5em;
-    color: $black;
-    border-radius: 0.25em;
-    font-size: 1.8rem;
-    transform: translate(-50%, -50%) rotate(90deg);
-            }
-        }
-    }
-}
-
-.cv-header {
-    &__nav {
+     &__nav {
     width: 100%;
     margin-top: 4rem;
     padding: 0 1rem;
@@ -254,22 +174,24 @@ a {
     margin: 0;
     font: $font400 1.8rem/1.56 sans-serif;
     
-    li {
-        
-        &:not(:last-child) {
+    li:not(:last-child) {
     margin-right: 1rem;
+    
+     @media (max-width: $mobile) {
+        width: 100%;
+        border-bottom: $black solid 2px;
+                }
             }
-        }
         
         > li {
     position: relative;
     display: block;
+    text-align: center;
     
             > a {
     position: relative;
     display: inline-block;
-    padding: 2rem 2rem;
-    text-decoration: none;
+    padding: 2rem;
     
                 &:before {
     content:'';
@@ -311,16 +233,136 @@ a {
     }
 }
 
+.cv-main {
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    &__section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid $gold;
+    
+        &-header {
+    margin-top: 3rem;
+    font: $font400 2rem/1.4 sans-serif;
+    color: $grey;
+        }
+        
+        &-string {
+    justify-content: space-between;
+    margin-bottom: 2rem;
+        }
+    }
+    
+    &__left {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 65%;
+    font: $font400 1.8rem/1.4 sans-serif;
+    padding-right: 2rem;
+    border-right: $gold solid 2px;
+    
+    @media (max-width: $small) {
+        width: 100%;
+        padding-right: 0;
+        border: none;
+        }
+    }
+    
+    &__block {
+    margin-top: 3rem;
+    
+        &-date {
+    font: $font400 1.4rem/2 sans-serif;
+    color: $grey;
+        }
+    }
+    
+    &__about-header,
+    &__block-header  {
+    font: $font700 2.2rem/1.5 sans-serif;
+    }
+    
+    &__right {
+    color: $grey;
+    font: $font400 2.2rem/1.4 sans-serif;
+    
+    @media (max-width: $small) {
+        @include flexrow();
+        margin-left: 0;
+        align-items: baseline;
+        width: 90%;
+        justify-content: space-between;
+        }
+    
+        &-title {
+    font: $font700 2.2rem/1.4 sans-serif;
+        }
+        
+        &-block {
+    width: 100%;
+    
+        &:nth-child(2) > .cv-main__right-graph {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+     @media (max-width: $small) {
+        display: flex;
+                }
+            }
+        }
+        
+        &-progressbar {
+    position: relative;
+    width: 17rem;
+    height: 17rem;
+    margin: 1em;
+    transform: rotate(-90deg);
+    
+            &-svg {
+    position: relative;
+    @include widthandhight();
+    
+                &-circle {
+    @include widthandhight();
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: $grey;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+                }
+            }
+            
+            &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0.25em 0.5em;
+    color: $black;
+    border-radius: 0.25em;
+    font-size: 1.8rem;
+    transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+}
+
 .cv-footer {
     margin-top: 3rem;
     background-color: $gold;
     
     &__block {
     width: 100%;
-    padding: 2rem  4.8rem;
+    padding: 2rem 4.8rem;
     justify-content: space-between;
     font: $font400 1.8rem/1.4 sans-serif;
     min-height: 8rem;
+    
+    @media (max-width: $small) {
+        flex-direction: column;
+        }
     }
     
     &__section {
@@ -344,7 +386,7 @@ a {
 .return_button {
     background-color: $gold;
     opacity: 0;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
 	border-radius: 50%;
     position: fixed;
 	right: 4rem;
@@ -361,7 +403,7 @@ a {
     margin-left: 2rem;
 }
 
-.shadow-html, .shadow-css, .shadow-js, .shadow-git, .shadow-github, .shadow-webpack {
+.shadow-html, .shadow-css, .shadow-js, .shadow-git, .shadow-github, .shadow-webpack, .shadow-sass {
     filter: drop-shadow(0 0 5px rgb(185, 161, 20, 0.8));
 }
 
@@ -386,6 +428,11 @@ a {
 }
 
 .circle-github {
+    -webkit-animation: anim_circle-github $animation;
+            animation: anim_circle-github $animation;
+}
+
+.circle-sass {
     -webkit-animation: anim_circle-github $animation;
             animation: anim_circle-github $animation;
 }
@@ -421,13 +468,13 @@ a {
 
 @-webkit-keyframes anim_circle-js {
     to {
-      stroke-dashoffset: 286;
+      stroke-dashoffset: 110;
     }
 }
 
 @keyframes anim_circle-js {
     to {
-      stroke-dashoffset: 286;
+      stroke-dashoffset: 110;
     }
 }
 
@@ -455,6 +502,18 @@ a {
     }
 }
 
+@-webkit-keyframes anim_circle-sass {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@keyframes anim_circle-sass {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
 @-webkit-keyframes anim_circle-webpack {
     to {
       stroke-dashoffset: 400;
@@ -467,48 +526,12 @@ a {
     }
 }
 
-@media (max-width: 600px) {
-    .cv-header {
-        
-        &__navblock {
-        flex-direction: column;
-        
-            &li:not(:last-child) {
-        width: 100%;
-        text-align: center;
-        border-bottom: $black solid 2px;
-            }
-        }
-    }
-}
-
 @media (max-width: 800px) {
-    .cv-header {
-        padding: 0 1rem;
-        
-        &__left {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        }
-        
-        &__right {
-        margin-top: 2rem;
-        }
-        
-        &__desc {
-        text-align: center;
-        }
-    }
 
     .cv-footer {
         
-        &__block {
-        flex-direction: column;
-        }
-        
         &__git {
-    text-align: center;
+        text-align: center;
         }
         
         &__section {
@@ -518,37 +541,6 @@ a {
         
         &__year {
         order: 2;
-        }
-    }
-}
-
-@media (max-width: 1100px) {
-    .cv-main {
-        
-        &__left {
-        width: 100%;
-        padding-right: 0;
-        border: none;
-        }
-        
-        &__right {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 0;
-        align-items: baseline;
-        width: 90%;
-        justify-content: space-between;
-        
-            &-block {
-                
-                &:nth-child(2) {
-                    
-                    > .cv-main__right-graph {
-        display: flex;
-                    }
-                }
-            }
         }
     }
 }
