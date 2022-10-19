@@ -1,0 +1,546 @@
+$black: black;
+$white: white;
+$gold: rgb(185, 161, 20, 0.8);
+$grey: #73808D;
+$font700: normal 700;
+$font400: normal 400;
+$animation: 1s ease-in-out forwards;
+$mobile: 600px;
+$tablet: 800px;
+$small: 1100px;
+
+@mixin widthandhight () {
+    width: 100%;
+    height: 100%;
+}
+@mixin flexrow () {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.woff2") format("woff2")
+         url("../fonts/Roboto-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Bold.woff2") format("woff2")
+         url("../fonts/Roboto-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: $black;
+    background: $white;
+    scroll-behavior: smooth;
+}
+
+img {
+    @include widthandhight();
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul > {
+    li {
+    list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.flex-row {
+    @include flexrow();
+}
+
+header,
+main,
+footer {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    &:hover{color: rgba(185, 20, 20, 0.8);}
+}
+
+.cv-header {
+    margin-top: 4.8rem;
+    justify-content: space-around;
+    align-items: center;
+    
+    &__title {
+    font: $font700 4.8rem/1.17 sans-serif;
+    }
+    
+    &__desc {
+    font: $font400 3.6rem/1.56 sans-serif;
+    
+    @media (max-width: $tablet) {
+        margin-top: 2rem;
+        }
+    }
+    
+    &__right {
+    display: flex;
+    border: 2px solid purple;
+    border-radius: 50%;
+    
+    @media (max-width: $mobile) {
+        margin-top: 2rem;
+        }
+    }
+    
+    &__photocon {
+    display: flex;
+    min-width: 18rem;
+    height: 18rem;
+    padding: 2px;
+    
+        &-pre {
+    display: contents;
+    padding: 2px;
+        }
+    }
+    
+    &__photo {
+    border-radius: 50%;
+    }
+    
+    &__left {
+        @media (max-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+    }
+    
+     &__nav {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 0 1rem;
+    background-color: $gold;
+    }
+    
+    &__navblock {
+    justify-content: space-around;
+    margin: 0;
+    font: $font400 1.8rem/1.56 sans-serif;
+    
+    li:not(:last-child) {
+    margin-right: 1rem;
+    
+     @media (max-width: $mobile) {
+        width: 100%;
+        border-bottom: $black solid 2px;
+                }
+            }
+        
+        > li {
+    position: relative;
+    display: block;
+    text-align: center;
+    
+            > a {
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    
+                &:before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform 0.3s;
+                }
+                
+                &:after {
+    content:'';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        background-color: $black;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s;
+                }
+                
+                &:hover:before {
+    transform-origin: top right;
+    transform: scaleX(1);
+                }
+                
+                &:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+.cv-main {
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    &__section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid $gold;
+    
+        &-header {
+    margin-top: 3rem;
+    font: $font400 2rem/1.4 sans-serif;
+    color: $grey;
+        }
+        
+        &-string {
+    justify-content: space-between;
+    margin-bottom: 2rem;
+        }
+    }
+    
+    &__left {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 65%;
+    font: $font400 1.8rem/1.4 sans-serif;
+    padding-right: 2rem;
+    border-right: $gold solid 2px;
+    
+    @media (max-width: $small) {
+        width: 100%;
+        padding-right: 0;
+        border: none;
+        }
+    }
+    
+    &__block {
+    margin-top: 3rem;
+    
+        &-date {
+    font: $font400 1.4rem/2 sans-serif;
+    color: $grey;
+        }
+    }
+    
+    &__about-header,
+    &__block-header  {
+    font: $font700 2.2rem/1.5 sans-serif;
+    }
+    
+    &__right {
+    color: $grey;
+    font: $font400 2.2rem/1.4 sans-serif;
+    
+    @media (max-width: $small) {
+        @include flexrow();
+        margin-left: 0;
+        align-items: baseline;
+        width: 90%;
+        justify-content: space-between;
+        }
+    
+        &-title {
+    font: $font700 2.2rem/1.4 sans-serif;
+        }
+        
+        &-block {
+    width: 100%;
+    
+        &:nth-child(2) > .cv-main__right-graph {
+    flex-wrap: wrap;
+    justify-content: center;
+    
+     @media (max-width: $small) {
+        display: flex;
+                }
+            }
+        }
+        
+        &-progressbar {
+    position: relative;
+    width: 17rem;
+    height: 17rem;
+    margin: 1em;
+    transform: rotate(-90deg);
+    
+            &-svg {
+    position: relative;
+    @include widthandhight();
+    
+                &-circle {
+    @include widthandhight();
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: $grey;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+                }
+            }
+            
+            &-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0.25em 0.5em;
+    color: $black;
+    border-radius: 0.25em;
+    font-size: 1.8rem;
+    transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+}
+
+.cv-footer {
+    margin-top: 3rem;
+    background-color: $gold;
+    
+    &__block {
+    width: 100%;
+    padding: 2rem 4.8rem;
+    justify-content: space-between;
+    font: $font400 1.8rem/1.4 sans-serif;
+    min-height: 8rem;
+    
+    @media (max-width: $small) {
+        flex-direction: column;
+        }
+    }
+    
+    &__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+    &__logo {
+    width: 7rem;
+    height: 4rem;
+    }
+    
+    &__git,
+    &__year {
+    align-self: center;
+    }
+}
+
+.return_button {
+    background-color: $gold;
+    opacity: 0;
+    padding: 1.5rem;
+	border-radius: 50%;
+    position: fixed;
+	right: 4rem;
+	bottom: 9rem;
+    cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+
+.m-top {
+    margin-top: 2rem;
+}
+
+.m-left {
+    margin-left: 2rem;
+}
+
+.shadow-html, .shadow-css, .shadow-js, .shadow-git, .shadow-github, .shadow-webpack, .shadow-sass {
+    filter: drop-shadow(0 0 5px rgb(185, 161, 20, 0.8));
+}
+
+.circle-html {
+    -webkit-animation: anim_circle-html $animation;
+            animation: anim_circle-html $animation;
+}
+
+.circle-css {
+    -webkit-animation: anim_circle-css $animation;
+            animation: anim_circle-css $animation;
+}
+
+.circle-js {
+    -webkit-animation: anim_circle-js $animation;
+            animation: anim_circle-js $animation;
+}
+
+.circle-git {
+    -webkit-animation: anim_circle-git $animation;
+            animation: anim_circle-git $animation;
+}
+
+.circle-github {
+    -webkit-animation: anim_circle-github $animation;
+            animation: anim_circle-github $animation;
+}
+
+.circle-sass {
+    -webkit-animation: anim_circle-github $animation;
+            animation: anim_circle-github $animation;
+}
+
+.circle-webpack {
+    -webkit-animation: anim_circle-webpack $animation;
+            animation: anim_circle-webpack $animation;
+}
+
+@-webkit-keyframes anim_circle-html {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes anim_circle-html {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes anim_circle-css {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@keyframes anim_circle-css {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@-webkit-keyframes anim_circle-js {
+    to {
+      stroke-dashoffset: 110;
+    }
+}
+
+@keyframes anim_circle-js {
+    to {
+      stroke-dashoffset: 110;
+    }
+}
+
+@-webkit-keyframes anim_circle-git {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@keyframes anim_circle-git {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@-webkit-keyframes anim_circle-github {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes anim_circle-github {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes anim_circle-sass {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@keyframes anim_circle-sass {
+    to {
+      stroke-dashoffset: 50;
+    }
+}
+
+@-webkit-keyframes anim_circle-webpack {
+    to {
+      stroke-dashoffset: 400;
+    }
+}
+
+@keyframes anim_circle-webpack {
+    to {
+      stroke-dashoffset: 400;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .cv-footer {
+        
+        &__git {
+        text-align: center;
+        }
+        
+        &__section {
+        justify-content: space-evenly;
+        order: 1;
+        }
+        
+        &__year {
+        order: 2;
+        }
+    }
+}
