@@ -1,4 +1,5 @@
 import "./style.scss"
+import "../img/SHE5459.jpg"
 
 function topBtn() {
   let topBtn = document.querySelector('.return_button')

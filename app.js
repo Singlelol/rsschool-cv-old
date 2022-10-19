@@ -1,1 +1,0 @@
-(()=>{"use strict";!function(){let t=document.querySelector(".return_button");t.onclick=function(){window.scrollTo(0,0)},document.addEventListener("scroll",(e=>{window.pageYOffset>200?t.style.opacity="1":t.style.opacity="0"}))}()})();
